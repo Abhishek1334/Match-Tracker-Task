@@ -1,47 +1,45 @@
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Root-level .gitignore for match-tracker
 
-# testing
-/coverage
+# Ignore node_modules in both frontend and backend
+match-tracker-frontend/node_modules/
+match-tracker-backend/node_modules/
 
-# production
-/build
-/dist
-/tmp
+# Ignore build/dist folders if any
+match-tracker-frontend/dist/
+match-tracker-backend/dist/
+match-tracker-frontend/build/
+match-tracker-backend/build/
 
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-.env
+# Ignore environment files
+match-tracker-frontend/.env
+match-tracker-backend/.env
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.npm
-*.tgz
-.yarn-integrity
-.cache
-.eslintcache
-
-# Logs
-logs
+# Ignore logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# OS-specific
+# Ignore system files
 .DS_Store
 Thumbs.db
 
-# Editor-specific
+# Ignore IDE/editor configs
 .vscode/
 .idea/
+*.swp
 
-# Vite-specific
-.vite/
+# Ignore coverage (if using Jest)
+match-tracker-backend/coverage/
+
+# Ignore test results or snapshots
+**/__snapshots__/
+**/*.test.js.snap
+
+# Optional: lock files if using yarn/pnpm interchangeably
+yarn.lock
+pnpm-lock.yaml
+
+# Optional: ignore output from Swagger docs (if generated)
+match-tracker-backend/swagger-output.json
