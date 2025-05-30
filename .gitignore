@@ -1,4 +1,5 @@
 # Root-level .gitignore for match-tracker
+node_modules/
 
 # Ignore node_modules in both frontend and backend
 match-tracker-frontend/node_modules/
